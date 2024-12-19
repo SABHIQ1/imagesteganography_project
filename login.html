@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Multi-level Encrypted Image Steganography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h1 class="project-title">Multi-level Encrypted Image Steganography</h1>
+            <h2 class="tagline">with Hash-Based Integrity</h2>
+
+            <form method="POST">
+                <!-- Username Field -->
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="input-group">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+
+            <!-- Registration Link -->
+            <p class="register-link">Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- FontAwesome CDN for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

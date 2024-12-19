@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ current_user.username }}</h2>
+
+    <!-- Form for image upload and message input -->
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image" required>
+        </div>
+        <br>
+        <div>
+            <label for="message">Message to Encode:</label>
+            <textarea name="message" id="message" required></textarea>
+        </div>
+        <br>
+        <button type="submit">Encode Message</button>
+    </form>
+
+    <!-- Display the encoded image -->
+    {% if encoded_image_path %}
+        <h3>Encoded Image:</h3>
+        <img src="{{ url_for('static', filename='encoded_image.png') }}" alt="Encoded Image" id="encodedImage">
+    {% endif %}
+
+    <br><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

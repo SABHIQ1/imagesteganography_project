@@ -1,0 +1,152 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center fixed; /* High-res background image */
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Center the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Login Card Styling */
+.login-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Project Title */
+.project-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #007aff; /* Vibrant Blue */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+/* Tagline styling */
+.tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #f2f2f2;
+    margin-bottom: 40px;
+    animation: fadeIn 1s 1s forwards;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 40px;  /* Padding for icon space */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    background-color: #f7f7f7;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 1px solid #007aff;
+    background-color: #e1f4ff;
+}
+
+/* Input Field Icons */
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007aff;
+    font-size: 1.2em;
+}
+
+/* Login Button */
+button.login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #007aff;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.login-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Register Link */
+.register-link {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #007aff;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
